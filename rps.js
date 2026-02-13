@@ -8,3 +8,8 @@ const getComputerChoice = () => {
         return "Scissors";
     }
 };
+
+const getHumanChoice = () => {
+    let humanInput = prompt("Choose: Rock, Paper, or Scissors!");
+    return humanInput.toUpperCase();
+}
