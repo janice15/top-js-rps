@@ -1,0 +1,24 @@
+.body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	height: 100vh;
+	margin: 0;
+	background-color: rgb(184, 230, 254);
+}
+
+.btn-container {
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+}
+
+button {
+	color: black;
+	padding: 10px;
+	border-color: rgb(22, 122, 216);
+	border-radius: 10px;
+	font-size: 16px;
+}
