@@ -9,5 +9,6 @@ buttons.forEach((button) => {
       `You chose: ${humanChoice} and Computer chose: ${computerChoice}. ${result}`;
     document.getElementById("player-score").textContent = `Your current score is ${playerScore}.`;
     document.getElementById("computer-score").textContent = `Computer's current score is ${computerScore}. `;
+    document.getElementById("current-round").textContent =  `Current round: ${currentRound}`;
   });
 });
