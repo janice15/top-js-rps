@@ -7,8 +7,16 @@ buttons.forEach((button) => {
     let result = playRound(humanChoice, computerChoice);
     document.getElementById("results-display").textContent =
       `You chose: ${humanChoice} and Computer chose: ${computerChoice}. ${result}`;
-    document.getElementById("player-score").textContent = `Your current score is ${playerScore}.`;
-    document.getElementById("computer-score").textContent = `Computer's current score is ${computerScore}. `;
-    document.getElementById("current-round").textContent =  `Current round: ${currentRound}`;
+    document.getElementById("player-score").textContent =
+      `Your current score is ${playerScore}.`;
+    document.getElementById("computer-score").textContent =
+      `Computer's current score is ${computerScore}. `;
+    document.getElementById("current-round").textContent =
+      `Current round: ${currentRound}`;
+
+    if (playerScore === 5 || computerScore === 5) {
+      let gameOver = getWinner(playerScore, computerScore);
+      document.getElementById("declare-winner").textContent = `${gameOver}`;
+    }
   });
 });
