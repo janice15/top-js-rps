@@ -1,3 +1,9 @@
+let playerScore = 0;
+let computerScore = 0;
+let currentRound = 0;
+
+
+
 const getComputerChoice = () => {
   let choice = Math.floor(Math.random() * 3);
   if (choice === 0) {
@@ -18,25 +24,26 @@ const getHumanChoice = () => {
 */
 
 const playRound = (humanChoice, computerChoice) => {
+    currentRound += 1
     if (
       (computerChoice === "ROCK" && humanChoice === "ROCK") ||
       (computerChoice === "SCISSORS" && humanChoice === "SCISSORS") ||
       (computerChoice === "PAPER" && humanChoice === "PAPER")
     ) {
-      return ("It's a tie");
+      return ("It's a tie!");
     } else if (
       (humanChoice === "ROCK" && computerChoice === "SCISSORS") ||
       (humanChoice === "PAPER" && computerChoice === "ROCK") ||
       (humanChoice === "SCISSORS" && computerChoice === "PAPER")
     ) {
-      //humanScore += 1;
+      playerScore += 1;
       return (`${humanChoice} beats ${computerChoice}! You win!`);
     } else if (
       (computerChoice === "ROCK" && humanChoice === "SCISSORS") ||
       (computerChoice === "PAPER" && humanChoice === "ROCK") ||
       (computerChoice === "SCISSORS" && humanChoice === "PAPER")
     ) {
-      //computerScore += 1;
+      computerScore += 1;
       return (`${computerChoice} beats ${humanChoice}! Computer wins!`);
       
     }
