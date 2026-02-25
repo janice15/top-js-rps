@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
+    if (playerScore === 5 || computerScore === 5) return;
     const humanChoice = event.target.id;
     const computerChoice = getComputerChoice();
     let result = playRound(humanChoice, computerChoice);
